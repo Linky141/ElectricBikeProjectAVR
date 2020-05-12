@@ -36,7 +36,7 @@ uint16_t setPwmValue(float volt, uint8_t multiplier);
 /* MAIN PROGRAM */
 int main() {
 	LCD_SetUp(PC_0, PC_1, PC_2, P_NC, P_NC, P_NC, P_NC, PC_3, PC_4, PC_5, PC_6);
-	LCD_Init(1, 16);
+	LCD_Init(2, 8);
 	PWM_Init();
 	PWM_Start();
 	DDRB = 0x00;
@@ -78,7 +78,7 @@ PWM_SetDutyCycle(2, second);
 			}
 
 		LCD_XYPrintf(0, 0, "%d/%d", first, firstPercent);
-		LCD_XYPrintf(6, 0, "%d", second);
+		LCD_XYPrintf(0, 1, "IN: %d", second);
 //		LCD_XYPrintf(0, 0, "%fV", voltage);
 	}
 	return (0);
