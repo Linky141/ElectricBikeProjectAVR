@@ -3,7 +3,7 @@
 
 /* BODY OF FUNCTIONS */
 void PWM_Init() {
-	DDRD |= (PWM_A | PWM_B);
+	DDRB |= (PWM_A | PWM_B);
 }
 
 void PWM_SetDutyCycle(uint8_t channel, uint8_t dutysCycle) {

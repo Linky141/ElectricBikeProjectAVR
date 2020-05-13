@@ -51,7 +51,7 @@ all: ElectricBike.elf secondary-outputs
 ElectricBike.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,ElectricBike.map -mmcu=atmega32 -o "ElectricBike.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,ElectricBike.map -mmcu=atmega328p -o "ElectricBike.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -75,7 +75,7 @@ ElectricBike.eep: ElectricBike.elf
 
 sizedummy: ElectricBike.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega32 ElectricBike.elf
+	-avr-size --format=avr --mcu=atmega328p ElectricBike.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -6,8 +6,8 @@
 #include "../Libraries/Headers/stdutils.h"
 
 /* DEFINITHIONS */
-#define PWM_A (1<<PD5)
-#define PWM_B (1<<PD4)
+#define PWM_A (1<<PB1)
+#define PWM_B (1<<PB2)
 
 /* FUNCTIONS */
 void PWM_Init();
